@@ -1,0 +1,35 @@
+<html>
+    <link rel="stylesheet" href="./css/style.css">
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1 style="font-weight: 100;">
+                    System Usage
+                    <br><small>by SystemLead</small>
+                </h1>
+                <div style="border-top:2px solid black" class="col">
+                    <label>
+                        CPU Usage
+                        <small id="cpuSmall">
+                        </small>
+                    </label><br>
+                    <progress id="cpuProgress" max="100"></progress>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>
+                        MEM Usage
+                        <small id="memSmall">
+                        </small>
+                    </label>
+                    <progress id="memProgress" max="100"></progress>
+                </div>
+            </div>
+            <a target="_blank" href="https://github.com/jack5341" style="float: right;">
+                developed by jack5341
+            </a>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
