@@ -1,0 +1,15 @@
+{
+  "name": "Create React App Sample",
+  "manifest_version": 2,
+  "version": "1.0",
+  "permissions": [
+    "system.memory"
+  ],
+  "matches": [
+      "<all_urls>"
+  ],
+  "browser_action": {
+      "default_popup": "index.html",
+      "default_title": "System Indicator"
+  }
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html{
+    height: 250px;
+    width: 200px;
+    padding: 10px 10px 10px 10px;
+}
+
+body{
+    font-family: 'Bebas Neue', cursive;
+}
+
+progress{
+    width: 100%;
+    height: 30px;
+    border: 2px solid #1D2228;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+     appearance: none;
+}
+
+progress::-webkit-progress-value{
+    background-color: #FB8122;
+    left: 5px;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0%;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1 small{
+    font-size: 10px;
+    font-weight: 100;
+    margin-right: 10px;
+}
+
+label{
+    color: #1D2228;
+    font-size: 20px;
+}
+
+small{
+    float: right;
+}
+
+.col{
+    margin-bottom: 15px;
+}
