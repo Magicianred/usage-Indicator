@@ -3,21 +3,29 @@ import React, { useEffect } from 'react'
 
 export default function Indicator() {
 
-    let usageCPU = () => {
-        var os = chrome.system.memory.getInfo((e) => e) 
-        return ~~((os.capacity - os.availableCapacity) * 100 / os.capacity)
-    }
-    
-    const [percentage,setPercentage] = React.useState(0)
+    const [percentageMEM,setPercentageMEM] = React.useState(0)
+    const [percentageCPU,setPercentageCPU] = React.useState(0)
 
-    const handleChange = () => {
-        console.log(usageCPU)
-        setPercentage(usageCPU)
+    let usageMEM = () => {
+        var total = 0;
+        var available = 0
+        chrome.system.memory.getInfo((e) => {
+            total = e.capacity
+            available = e.availableCapacity
+            var result = ~~((total - available) * 100 / total)
+            setPercentageMEM(result)
+        }) 
     }
+
+
+    // const handleChange = () => {
+    //     console.log(usageCPU)
+    //     setPercentage(usageCPU)
+    // }
 
     useEffect(() => {
-        const x = setInterval(handleChange, 500)
-        return () => clearInterval(x)
+        const usagemem = setInterval(usageMEM, 50)
+        return () => clearInterval(usagemem)
     });
 
     return (
@@ -27,9 +35,9 @@ export default function Indicator() {
                 System Usage
                 <br/><small>by SystemLead</small>
             </h1>
-            <div style={{borderTop: + "2px solid black"}} className="col">
+            <div style={{borderTop: + "2px solid black", marginBottom: "0px"}} className="col">
                 <label>
-                    {percentage}
+                    CPU Usage
                     <small id="cpuSmall">
                     </small>
                 </label><br/>
@@ -41,12 +49,13 @@ export default function Indicator() {
                 <label>
                     MEM Usage
                     <small id="memSmall">
+                        {percentageMEM} %
                     </small>
                 </label>
-                <progress value={60} max="100"></progress><br/><br/>
+                <progress value={percentageMEM} max="100"></progress><br/><br/>
                 </div>
             </div>
-            <a target="_blank" href="https://github.com/jack5341" style={{float: "right"}}>
+            <a target="_blank" href="https://github.com/jack5341" style={{float: "right", marginTop: "-9%", marginRight: "5%", borderBottom: "2px solid #ffb074", color: "black"}}>
                 developed by jack5341
             </a>
         </div>

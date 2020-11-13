@@ -3,7 +3,10 @@
   "manifest_version": 2,
   "version": "1.0",
   "permissions": [
-    "system.memory"
+    "system.memory",
+    "system.cpu",
+    "storage",
+    "processes"
   ],
   "matches": [
       "<all_urls>"
