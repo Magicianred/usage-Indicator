@@ -1,5 +1,6 @@
 {
-  "name": "Create React App Sample",
+  "name": "Usage Indicator",
+  "description": "Basic system usage indicator for low level pc's",
   "manifest_version": 2,
   "version": "1.0",
   "permissions": [
