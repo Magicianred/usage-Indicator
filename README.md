@@ -1,3 +1,7 @@
+# Thanks to 🎉
+[@damla](https://github.com/damla) 💎
+[@theykk](https://github.com/TheYkk) 💎
+
 # Usage Indicator
 Basic React.js system usage indicator (CPU,MEM)
 
