@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 /*global chrome*/
 
 export default function Indicator() {
 
-    const [percentageMEM,setPercentageMEM] = React.useState(0)
-    const [percentageCPU,setPercentageCPU] = React.useState(0)
+    const [percentageMEM,setPercentageMEM] = useState(0)
+    const [percentageCPU,setPercentageCPU] = useState(0)
 
     let usageMEM = () => {
         var total = 0;
@@ -33,7 +33,6 @@ export default function Indicator() {
         <div className="row">
             <h1 style={{fontWeight: "100"}}>
                 System Usage
-                <br/><small>by SystemLead</small>
             </h1>
             <div style={{borderTop: + "2px solid black", marginBottom: "0px"}} className="col">
                 <label>
