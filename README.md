@@ -7,7 +7,6 @@
 **Have you an low spec computer ? then you are in right place !**
 Here is my open source chrome extension for **Usage Indicator** by React.js
 
-> Screen Shot
 ![Repo gif](https://raw.githubusercontent.com/jack5341/usage-Indicator/master/master/extension-photo.PNG)
 
 ### Chrome Permissions
